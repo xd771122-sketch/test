@@ -1,0 +1,105 @@
+.desk {
+    background: linear-gradient(to bottom, #8B7355, #D2B48C, #A0826D);
+}
+
+.notebook {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom, #FFFEF0, #FFF8DC);
+    position: relative;
+}
+
+.notebook::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: #ccc;
+}
+
+.notebook::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: repeating-linear-gradient(0deg, transparent, transparent 10px, #D4A574 10px, #D4A574 12px);
+}
+
+.notebook-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.notebook-header {
+    text-align: center;
+}
+
+.notebook-tasks {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    border-left: 5px solid #D4A574;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.task-time {
+    font-weight: bold;
+}
+
+.task-text {
+    margin-left: 10px;
+}
+
+.delete-btn {
+    margin-left: 10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+.notebook-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.input-time {
+    width: 110px;
+}
+
+.input-task {
+    flex-grow: 1;
+}
+
+.submit-btn {
+    background: linear-gradient(#FFFEF0, #FFF8DC);
+}
+
+.submit-btn:hover {
+    background: #D2B48C;
+}
+
+@media (max-width: 600px) {
+    .notebook {
+        width: 100%;
+        border-radius: 0;
+    }
+}
